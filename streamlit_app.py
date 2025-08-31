@@ -29,7 +29,7 @@ except LookupError:
     nltk.download('stopwords', quiet=True)
 
 def get_youtube_client():
-    api_key = st.secrets.get("YOUTUBE_API_KEY", AIzaSyDHZ63uhU-GFojNCYt-nQGpVmYqbLRqxTw)
+    api_key = st.secrets.get("YOUTUBE_API_KEY", "AIzaSyDHZ63uhU-GFojNCYt-nQGpVmYqbLRqxTw")
     if not api_key:
         st.error("❌ Missing YOUTUBE_API_KEY in secrets. Add it in Streamlit Cloud 'App Settings → Secrets' or in .streamlit/secrets.toml for local.")
         st.stop()
